@@ -1,6 +1,6 @@
 /**
-* Updated: 
-* Author:
+* Updated: March 27, 2024
+* Author: Dexign
 */
 
 --------------------------------------------------------------*/
@@ -13,6 +13,7 @@
 /* Colors */
 :root {
   --color-default: #222222;
+  --gray: #666666;
   --gradient-default: linear-gradient(-45deg, #1391a5, #274685); 
   --gradient-bg: linear-gradient(to right, rgba(39, 70, 133, 0.8) 0%, rgba(61, 179, 197, 0.8) 100%);
   --main-1: #274685;
@@ -41,7 +42,7 @@ a {
 }
 
 a:hover {
-  color: #00b6a1;
+  color: var(--btn-hover);
   text-decoration: none;
 }
 
@@ -74,8 +75,6 @@ section {
 }
 
 .section-header h2 {
-  /* font-size: 32px;
-  font-weight: 600; */
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
@@ -92,7 +91,6 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: var(--color-primary);
   left: 0;
   right: 0;
   bottom: 0;
@@ -101,7 +99,7 @@ section {
 
 .section-header p {
   margin-bottom: 0;
-  color: #6f6f6f;
+  color: var(--gray);
 }
 
 /*--------------------------------------------------------------
@@ -182,7 +180,7 @@ section {
 .header .logo h1 {
   font-size: 28px;
   margin: 0;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.8px;
   color: #fff;
   font-family: "Poppins", sans-serif;
@@ -231,7 +229,7 @@ section {
     font-family: "Roboto", sans-serif;
     font-size: 15px;
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.7);
     white-space: nowrap;
     transition: 0.3s;
     position: relative;
@@ -241,7 +239,7 @@ section {
   .navbar a:focus i {
     font-size: 12px;
     line-height: 0;
-    margin-left: 5px;
+    margin-left: 2px;
   }
 
   /* .navbar>ul>li>a:before {
@@ -678,10 +676,6 @@ section {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.hero .icon-box:hover {
-  background: var(--main-2);
-}
-
 .hero .icon-box:hover .title a,
 .hero .icon-box:hover .icon {
   color: #fff;
@@ -753,26 +747,97 @@ section {
 # Faculty
 --------------------------------------------------------------*/
 
-/*--------------------------------------------------------------
-# Gallery
---------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
 
 
-
 /*--------------------------------------------------------------
 # Frequently Asked Questions Section
 --------------------------------------------------------------*/
 
+/*--------------------------------------------------------------
+# Events
+--------------------------------------------------------------*/
+.recent-events .post-item {
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.06);
+  transition: 0.3s;
+}
+
+.recent-events .post-item .post-img img {
+  transition: 0.5s;
+}
+
+.recent-events .post-item .post-date {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: var(--main-2);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 6px 12px;
+  font-weight: 500;
+}
+
+.recent-events .post-item .post-content {
+  padding: 30px;
+}
+
+.recent-events .post-item .post-title {
+  font-size: 18px;
+  color: var(--color-default);
+  font-weight: 500;
+  transition: 0.3s;
+  margin-bottom: 15px;
+}
+
+/* .recent-events .post-item .meta i {
+  font-size: 16px;
+  color: var(--color-primary);
+} */
+
+.recent-events .post-item .meta span {
+  font-size: 14px;
+  color: var(--gray);
+}
+
+.recent-events .post-item hr {
+  color: var(--gray);
+  margin: 18px 0;
+}
+
+.recent-events .post-item .readmore {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  transition: 0.3s;
+  color: var(--main-3);
+}
+
+.recent-events .post-item .readmore i {
+  line-height: 0;
+  margin-left: 6px;
+  font-size: 12px;
+}
+
+.recent-events .post-item:hover .post-title,
+.recent-events .post-item:hover .readmore {
+  color: var(--main-2);
+}
+
+.recent-events .post-item:hover .post-img img {
+  transform: scale(1.06);
+}
 
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
 .contact .info-container {
-  background-color: var(--color-primary);
+  background-color: var(--main-2);
   height: 100%;
   padding: 20px;
   border-radius: 10px 0 0 10px;
@@ -781,11 +846,11 @@ section {
 
 .contact .info-item {
   width: 100%;
-  background-color: #009282;
+  background-color: #fff;
   margin-bottom: 20px;
   padding: 20px;
   border-radius: 10px;
-  color: #fff;
+  color: var(--color-default);
 }
 
 .contact .info-item:last-child {
@@ -809,8 +874,8 @@ section {
 
 .contact .info-item h4 {
   padding: 0;
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 500;
   margin-bottom: 5px;
 }
 
@@ -895,7 +960,7 @@ section {
 .contact .php-email-form input[type=text]:focus,
 .contact .php-email-form input[type=email]:focus,
 .contact .php-email-form textarea:focus {
-  border-color: var(--color-primary);
+  border-color: var(--main-3);
 }
 
 .contact .php-email-form textarea {
@@ -934,39 +999,44 @@ section {
 
 
 /*--------------------------------------------------------------
-# Testimonials
---------------------------------------------------------------*/
-
-
-/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 .footer {
-  font-size: 14px;
   background: var(--gradient-default);
-  padding: 50px 0;
-  color: white;
+  color: #fff;
+  font-size: 14px;
+  padding-bottom: 40px;
+  font-family: "Poppins", sans-serif;
 }
 
-.footer .footer-info h2 {
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 1px;
+.footer .footer-top {
+  padding-top: 40px;
+}
+
+.footer .footer-about h2 {
   color: #fff;
-  font-family: "Roboto", sans-serif;
-  padding-top: 0px;
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
+  padding-bottom: 12px;
+}
+
+.footer .footer-about p {
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
 }
 
 .footer .social-links a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.7);
+  width: 36px;
+  height: 36px;
+  border-radius: 18%;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.6);
   margin-right: 10px;
   transition: 0.3s;
 }
@@ -977,13 +1047,15 @@ section {
 }
 
 .footer h4 {
+  color: #fff;
   font-size: 16px;
+  font-weight: 600;
   position: relative;
   padding-bottom: 12px;
 }
 
 .footer .footer-links {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .footer .footer-links ul {
@@ -994,7 +1066,6 @@ section {
 
 .footer .footer-links ul i {
   padding-right: 2px;
-  color: rgba(0, 131, 116, 0.8);
   font-size: 12px;
   line-height: 0;
 }
@@ -1010,14 +1081,17 @@ section {
 }
 
 .footer .footer-links ul a {
-  color: rgba(255, 255, 255, 0.7);
-  transition: 0.3s;
+  color: rgba(255, 255, 255, 0.6);
   display: inline-block;
-  line-height: 1;
+  line-height: 0.5;
 }
 
 .footer .footer-links ul a:hover {
   color: #fff;
+}
+
+.footer .footer-other p {
+  margin-bottom: 15px;
 }
 
 .footer .footer-logo img {
@@ -1025,26 +1099,20 @@ section {
   margin-right: 18px;
 }
 
-.footer .footer-line {
-  border: none; /* Remove default border */
-  height: 2px; /* Set the height of the line */
-  background-color: #ccc; /* Choose your preferred color */
+.footer .copyright {
+  padding-top: 22px;
+  padding-bottom: 22px;
+  background: var(--main-2);
 }
 
-.footer .copyright {
-  text-align: center;
+.footer .copyright p {
+  margin-bottom: 0;
 }
 
 .footer .credits {
-  padding-top: 4px;
-  text-align: center;
+  margin-top: 6px;
   font-size: 13px;
 }
-
-.footer .credits a {
-  color: #fff;
-}
-
 
 
 /*--------------------------------------------------------------
@@ -1057,7 +1125,7 @@ section {
   right: 15px;
   bottom: -15px;
   z-index: 99999;
-  background: var(--main-2);
+  background: var(--main-1);
   width: 44px;
   height: 44px;
   border-radius: 50px;
@@ -1070,9 +1138,9 @@ section {
   line-height: 0;
 }
 
-.scroll-top:hover {
-  background: var(--btn-hover);
-}
+/* .scroll-top:hover {
+  background: var(--main-2);
+} */
 
 .scroll-top.active {
   visibility: visible;

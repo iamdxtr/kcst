@@ -1,9 +1,6 @@
 /**
-* Template Name: Impact
-* Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
-* Updated: Mar 17 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
+* Updated: Mar 27 2024
+* Author: Dexign
 */
 
 document.addEventListener('DOMContentLoaded', () => {
