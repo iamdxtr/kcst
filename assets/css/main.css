@@ -14,6 +14,7 @@
 :root {
   --color-default: #222222;
   --gray: #666666;
+  --light-gray: #b4b4b4;
   --gradient-default: linear-gradient(-45deg, #1391a5, #274685); 
   --gradient-bg: linear-gradient(to right, rgba(39, 70, 133, 0.8) 0%, rgba(61, 179, 197, 0.8) 100%);
   --main-1: #274685;
@@ -661,12 +662,12 @@ section {
   font-family: "Poppins", sans-serif;
 }
 
-.hero .icon-box .title a {
+/* .hero .icon-box .title a {
   color: #fff;
   transition: 0.3s;
-}
+} */
 
-.hero .icon-box .icon {
+/* .hero .icon-box .icon {
   margin-bottom: 20px;
   padding-top: 10px;
   display: inline-block;
@@ -674,12 +675,12 @@ section {
   font-size: 48px;
   line-height: 1;
   color: rgba(255, 255, 255, 0.6);
-}
+} */
 
-.hero .icon-box:hover .title a,
+/* .hero .icon-box:hover .title a,
 .hero .icon-box:hover .icon {
   color: #fff;
-}
+} */
 
 
 /*--------------------------------------------------------------
@@ -731,12 +732,84 @@ section {
 /*--------------------------------------------------------------
 # About Us Section
 --------------------------------------------------------------*/
+.about h4 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--main-1);
+}
 
+.about p {
+  color: var(--gray);
+  /* color: rgba(255, 255, 255, 0.6); */
+  font-weight: 400;
+  margin-bottom: 30px;
+  font-family: "Roboto", sans-serif;
+}
+
+.about .icon-box {
+  padding: 30px 30px 8px;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  border: 1px var(--main-3) solid;
+  /* box-shadow: 0 0 29px 0 rgba(0, 0, 0, 0.08); */
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.about .icon-box .title {
+  font-weight: 400;
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* .about .icon-boxes {
+  padding-bottom: 60px;
+} */
 
 /*--------------------------------------------------------------
-# Courses
+# Statistics
 --------------------------------------------------------------*/
+.stats {
+  padding: 70px 0 60px;
+}
 
+.stats .count-box {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+}
+
+.stats .count-box i {
+  font-size: 42px;
+  line-height: 0;
+  margin-right: 20px;
+  color: var(--main-3);
+}
+
+.stats .count-box span {
+  font-size: 36px;
+  display: block;
+  font-weight: 600;
+  color: var(--main-1);
+}
+
+.stats .count-box p {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-default);
+}
 
 /*--------------------------------------------------------------
 # Colleges
@@ -746,7 +819,100 @@ section {
 /*--------------------------------------------------------------
 # Faculty
 --------------------------------------------------------------*/
+.faculty {
+  background: #fff;
+  padding: 60px 0;
+}
 
+.faculty .member {
+  overflow: hidden;
+  text-align: center;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+  transition: 0.3s;
+}
+
+.faculty .member .member-img {
+  background: var(--gray);
+  position: relative;
+  overflow: hidden;
+}
+
+.faculty .member .member-img:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background: url(../img/faculty-shape.svg) no-repeat center bottom;
+  background-size: contain;
+  z-index: 1;
+}
+
+.faculty .member .social {
+  position: absolute;
+  right: -100%;
+  top: 30px;
+  opacity: 0;
+  border-radius: 4px;
+  transition: 0.5s;
+  background: rgba(255, 255, 255, 0.3);
+  z-index: 2;
+}
+
+.faculty .member .social a {
+  transition: color 0.3s;
+  color: var(--main-3);
+  margin: 15px 12px;
+  display: block;
+  line-height: 0;
+  text-align: center;
+}
+
+.faculty .member .social a:hover {
+  color: var(--main-2);
+}
+
+.faculty .member .social i {
+  font-size: 18px;
+}
+
+.faculty .member .member-info {
+  padding: 10px 15px 20px 15px;
+}
+
+.faculty .member .member-info h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: var(--main-2);
+}
+
+.faculty .member .member-info span {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-default);
+}
+
+.faculty .member .member-info p {
+  font-size: 14px;
+  padding-top: 15px;
+  line-height: 18px;
+  color: var(--gray);
+}
+
+.faculty .member:hover {
+  transform: scale(1.06);
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+}
+
+.faculty .member:hover .social {
+  right: 8px;
+  opacity: 1;
+}
 
 /*--------------------------------------------------------------
 # Testimonials Section
@@ -760,16 +926,16 @@ section {
 /*--------------------------------------------------------------
 # Events
 --------------------------------------------------------------*/
-.recent-events .post-item {
+.events .post-item {
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.06);
   transition: 0.3s;
 }
 
-.recent-events .post-item .post-img img {
+.events .post-item .post-img img {
   transition: 0.5s;
 }
 
-.recent-events .post-item .post-date {
+.events .post-item .post-date {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -781,11 +947,11 @@ section {
   font-weight: 500;
 }
 
-.recent-events .post-item .post-content {
+.events .post-item .post-content {
   padding: 30px;
 }
 
-.recent-events .post-item .post-title {
+.events .post-item .post-title {
   font-size: 18px;
   color: var(--color-default);
   font-weight: 500;
@@ -793,22 +959,22 @@ section {
   margin-bottom: 15px;
 }
 
-/* .recent-events .post-item .meta i {
+/* .events .post-item .meta i {
   font-size: 16px;
   color: var(--color-primary);
 } */
 
-.recent-events .post-item .meta span {
+.events .post-item .meta span {
   font-size: 14px;
   color: var(--gray);
 }
 
-.recent-events .post-item hr {
+.events .post-item hr {
   color: var(--gray);
   margin: 18px 0;
 }
 
-.recent-events .post-item .readmore {
+.events .post-item .readmore {
   display: flex;
   align-items: center;
   font-size: 16px;
@@ -818,18 +984,18 @@ section {
   color: var(--main-3);
 }
 
-.recent-events .post-item .readmore i {
+.events .post-item .readmore i {
   line-height: 0;
   margin-left: 6px;
   font-size: 12px;
 }
 
-.recent-events .post-item:hover .post-title,
-.recent-events .post-item:hover .readmore {
+.events .post-item:hover .post-title,
+.events .post-item:hover .readmore {
   color: var(--main-2);
 }
 
-.recent-events .post-item:hover .post-img img {
+.events .post-item:hover .post-img img {
   transform: scale(1.06);
 }
 
