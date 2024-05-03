@@ -733,10 +733,11 @@ section {
 # About Us Section
 --------------------------------------------------------------*/
 .about h4 {
-  font-size: 32px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  font-size: 24px;
   color: var(--main-1);
+  font-family: "Poppins", sans-serif;
 }
 
 .about p {
@@ -772,6 +773,12 @@ section {
 /* .about .icon-boxes {
   padding-bottom: 60px;
 } */
+
+@media (max-width: 640px) {
+  .about h2 {
+    font-size: 36px;
+  }
+}
 
 /*--------------------------------------------------------------
 # Statistics
@@ -811,10 +818,111 @@ section {
   color: var(--color-default);
 }
 
-/*--------------------------------------------------------------
-# Colleges
---------------------------------------------------------------*/
+@media (max-width: 640px) {
+  .stats h2 {
+    font-size: 36px;
+  }
+}
 
+/*--------------------------------------------------------------
+# Events
+--------------------------------------------------------------*/
+.events .post-item {
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.06);
+  transition: 0.3s;
+}
+
+.events .post-item .post-img img {
+  transition: 0.5s;
+}
+
+.events .post-item .post-date {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: var(--main-2);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 6px 12px;
+  font-weight: 500;
+}
+
+.events .post-item .post-content {
+  padding: 30px;
+}
+
+.events .post-item .post-title {
+  font-size: 18px;
+  color: var(--color-default);
+  font-weight: 500;
+  transition: 0.3s;
+  margin-bottom: 15px;
+}
+
+/* .events .post-item .meta i {
+  font-size: 16px;
+  color: var(--color-primary);
+} */
+
+.events .post-item .meta span {
+  font-size: 14px;
+  color: var(--gray);
+}
+
+.events .post-item hr {
+  color: var(--gray);
+  margin: 18px 0;
+}
+
+.events .post-item .readmore {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  transition: 0.3s;
+  color: var(--main-3);
+}
+
+.events .post-item .readmore i {
+  line-height: 0;
+  margin-left: 6px;
+  font-size: 12px;
+}
+
+.events .post-item:hover .post-title,
+.events .post-item:hover .readmore {
+  color: var(--main-2);
+}
+
+.events .post-item:hover .post-img img {
+  transform: scale(1.06);
+}
+
+@media (max-width: 640px) {
+  .events h2 {
+    font-size: 36px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Life@KCST
+--------------------------------------------------------------*/
+@media (max-width: 640px) {
+  .life h2 {
+    font-size: 36px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Office of the President
+--------------------------------------------------------------*/
+@media (max-width: 640px) {
+  .president h2 {
+    font-size: 36px;
+  }
+}
 
 /*--------------------------------------------------------------
 # Faculty
@@ -914,89 +1022,46 @@ section {
   opacity: 1;
 }
 
-/*--------------------------------------------------------------
-# Testimonials Section
---------------------------------------------------------------*/
-
-
-/*--------------------------------------------------------------
-# Frequently Asked Questions Section
---------------------------------------------------------------*/
+@media (max-width: 640px) {
+  .faculty h2 {
+    font-size: 36px;
+  }
+}
 
 /*--------------------------------------------------------------
-# Events
+# Colleges Section
 --------------------------------------------------------------*/
-.events .post-item {
-  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.06);
-  transition: 0.3s;
+@media (max-width: 640px) {
+  .colleges h2 {
+    font-size: 36px;
+  }
 }
 
-.events .post-item .post-img img {
-  transition: 0.5s;
+/*--------------------------------------------------------------
+# Programs Section
+--------------------------------------------------------------*/
+@media (max-width: 640px) {
+  .programs h2 {
+    font-size: 36px;
+  }
 }
 
-.events .post-item .post-date {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  background-color: var(--main-2);
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 12px;
-  padding: 6px 12px;
-  font-weight: 500;
+/*--------------------------------------------------------------
+# Students Organization Section
+--------------------------------------------------------------*/
+@media (max-width: 640px) {
+  .students-org h2 {
+    font-size: 36px;
+  }
 }
 
-.events .post-item .post-content {
-  padding: 30px;
-}
-
-.events .post-item .post-title {
-  font-size: 18px;
-  color: var(--color-default);
-  font-weight: 500;
-  transition: 0.3s;
-  margin-bottom: 15px;
-}
-
-/* .events .post-item .meta i {
-  font-size: 16px;
-  color: var(--color-primary);
-} */
-
-.events .post-item .meta span {
-  font-size: 14px;
-  color: var(--gray);
-}
-
-.events .post-item hr {
-  color: var(--gray);
-  margin: 18px 0;
-}
-
-.events .post-item .readmore {
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1;
-  transition: 0.3s;
-  color: var(--main-3);
-}
-
-.events .post-item .readmore i {
-  line-height: 0;
-  margin-left: 6px;
-  font-size: 12px;
-}
-
-.events .post-item:hover .post-title,
-.events .post-item:hover .readmore {
-  color: var(--main-2);
-}
-
-.events .post-item:hover .post-img img {
-  transform: scale(1.06);
+/*--------------------------------------------------------------
+# Students Testimonial Section
+--------------------------------------------------------------*/
+@media (max-width: 640px) {
+  .testimonial h2 {
+    font-size: 36px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1157,12 +1222,11 @@ section {
   }
 }
 
-
-
-/*--------------------------------------------------------------
-# Events
---------------------------------------------------------------*/
-
+@media (max-width: 640px) {
+  .contact h2 {
+    font-size: 36px;
+  }
+}
 
 /*--------------------------------------------------------------
 # Footer
@@ -1279,7 +1343,6 @@ section {
   margin-top: 6px;
   font-size: 13px;
 }
-
 
 /*--------------------------------------------------------------
 # Scroll top button
