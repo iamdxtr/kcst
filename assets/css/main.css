@@ -730,15 +730,21 @@ section {
 /*--------------------------------------------------------------
 # About Us Section
 --------------------------------------------------------------*/
+.about {
+  padding: 70px 0 60px;
+}
+
 .about h4 {
   font-weight: 600;
   margin-bottom: 15px;
   font-size: 24px;
-  color: var(--main-1);
+  color: var(--main-2);
   font-family: "Poppins", sans-serif;
 }
 
 .about p {
+  margin: 0;
+  padding: 0;
   color: var(--gray);
   /* color: rgba(255, 255, 255, 0.6); */
   font-weight: 400;
@@ -793,14 +799,15 @@ section {
   width: 100%;
   background: #fff;
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+  border-bottom: solid 2px var(--main-2);
 }
 
-.stats .count-box i {
+/* .stats .count-box i {
   font-size: 42px;
   line-height: 0;
   margin-right: 20px;
   color: var(--main-3);
-}
+} */
 
 .stats .count-box span {
   font-size: 38px;
@@ -812,11 +819,12 @@ section {
 .stats .count-box p {
   padding: 0;
   margin: 0;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 400;
   color: var(--color-default);
+  font-family: "Poppins", sans-serif;
 }
-
+ 
 @media (max-width: 640px) {
   .stats h2 {
     font-size: 36px;
@@ -871,7 +879,7 @@ section {
 
 .events .post-item hr {
   color: var(--gray);
-  margin: 18px 0;
+  margin: 14px 0;
 }
 
 .events .post-item .readmore {
@@ -895,7 +903,7 @@ section {
 }
 
 .events .post-item:hover .post-img img {
-  transform: scale(1.06);
+  transform: scale(1.04);
 }
 
 @media (max-width: 640px) {
@@ -940,12 +948,12 @@ section {
 }
 
 .faculty .member .member-img {
-  background: var(--gray);
+  background: var(--light-gray);
   position: relative;
   overflow: hidden;
 }
 
-.faculty .member .member-img:after {
+/* .faculty .member .member-img:after {
   position: absolute;
   content: "";
   left: 0;
@@ -955,7 +963,7 @@ section {
   background: url(../img/faculty-shape.svg) no-repeat center bottom;
   background-size: contain;
   z-index: 1;
-}
+} */
 
 .faculty .member .social {
   position: absolute;
@@ -978,7 +986,7 @@ section {
 }
 
 .faculty .member .social a:hover {
-  color: var(--main-2);
+  color: var(--main-1);
 }
 
 .faculty .member .social i {
@@ -1011,7 +1019,7 @@ section {
 }
 
 .faculty .member:hover {
-  transform: scale(1.06);
+  transform: scale(1.02);
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
 }
 
