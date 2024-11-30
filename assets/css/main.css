@@ -1140,7 +1140,10 @@ section {
 
 .colleges .colleges-filters li:hover,
 .colleges .colleges-filters li.filter-active {
-  color: var(--main-2);
+  color: #fff;
+  background-color: var(--main-2);
+  padding: 4px 6px 4px;
+  border-radius: 4px;
 }
 
 .colleges .colleges-filters li:first-child {
