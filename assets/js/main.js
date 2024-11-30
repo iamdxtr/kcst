@@ -1,6 +1,6 @@
 /**
 * Updated: Mar 27 2024
-* Author: Dexign
+* Author:
 */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -41,26 +41,35 @@ document.addEventListener('DOMContentLoaded', () => {
    * Navbar links active state on scroll
    */
   let navbarlinks = document.querySelectorAll('#navbar a');
+  const headerOffset = 70; // Adjust this based on your fixed header height
 
   function navbarlinksActive() {
-    navbarlinks.forEach(navbarlink => {
+    let position = window.scrollY + headerOffset;
 
-      if (!navbarlink.hash) return;
+    navbarlinks.forEach(navbarlink => {
+      if (!navbarlink.hash) return; // Skip links without hashes
 
       let section = document.querySelector(navbarlink.hash);
-      if (!section) return;
-
-      let position = window.scrollY + 200;
+      if (!section) return; // Skip invalid sections
 
       if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
         navbarlink.classList.add('active');
       } else {
         navbarlink.classList.remove('active');
       }
-    })
+    });
   }
+
+  // Optimize scroll events using a timeout (debouncing)
+  let debounceTimeout;
+  document.addEventListener('scroll', () => {
+    clearTimeout(debounceTimeout);
+    debounceTimeout = setTimeout(navbarlinksActive, 50); // Adjust delay as needed
+  });
+
+  // Trigger on page load
   window.addEventListener('load', navbarlinksActive);
-  document.addEventListener('scroll', navbarlinksActive);
+
 
   /**
    * Mobile nav toggle
@@ -272,6 +281,39 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
   }
+
+  /**
+   * Init isotope layout and filters
+   */
+  document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
+    let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
+    let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
+    let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
+
+    let initIsotope;
+    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
+      initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
+        itemSelector: '.isotope-item',
+        layoutMode: layout,
+        filter: filter,
+        sortBy: sort
+      });
+    });
+
+    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
+      filters.addEventListener('click', function() {
+        isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
+        this.classList.add('filter-active');
+        initIsotope.arrange({
+          filter: this.getAttribute('data-filter')
+        });
+        if (typeof aosInit === 'function') {
+          aosInit();
+        }
+      }, false);
+    });
+
+  });
 
   /**
    * Animation on scroll function and init

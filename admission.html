@@ -11,7 +11,6 @@
 
   <!-- Favicons -->
   <link href="assets/img/header-logo.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,20 +19,16 @@
 
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/libs/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/libs/aos/aos.css" rel="stylesheet">
+  <link href="assets/libs/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/libs/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Updated: Mar 24 2024
-  * Author: Dexter
-  ======================================================== -->
 </head>
 
 <body>
@@ -46,9 +41,8 @@
         <i class="bi bi-phone d-flex align-items-center ms-4"><span>+63 916-2271891</span></i>
       </div>
       <div class="social-links d-none d-md-flex align-items-center">
-        <a href="#" class="tiktok"><i class="bi bi-tiktok"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.tiktok.com" class="tiktok"><i class="bi bi-tiktok"></i></a>
+        <a href="https://www.facebook.com" class="facebook"><i class="bi bi-facebook"></i></a>
       </div>
     </div>
   </section><!-- End Top Bar -->
@@ -62,33 +56,34 @@
       </a>
       <nav id="navbar" class="navbar">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li class="dropdown"><a href="index.html#about"><span>About</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-              <ul>
-                <li><a href="index.html#about">KCST History</a></li>
-                <li><a href="index.html#events">KCST Events</a></li>
-                <li><a href="index.html#life">Life@KCST</a></li>
-              </ul>
-            </li>
-            <li class="dropdown"><a href="administration.html"><span>Administration</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-              <ul>
-                <li><a href="administration.html#president">Office of the President</a></li>
-                <li><a href="administration.html#faculty">Faculty</a></li>
-              </ul>
-            </li>
-            <li class="dropdown"><a href="admission.html"><span>Admission</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-              <ul>
-                <li><a href="#colleges">Colleges</a></li>
-                <li><a href="#programs">Programs</a></li>
-              </ul>
-            </li>
-            <li class="dropdown"><a href="students.html"><span>Students</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-              <ul>
-                <li><a href="students.html#students-org">Students Organization</a></li>
-                <li><a href="students.html#testimonial">Students Testimonial</a></li>
-              </ul>
-            </li>
-            <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <!-- <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="#about">KCST History</a></li>
+              <li><a href="#events">KCST Events</a></li>
+              <li><a href="#life">Life@KCST</a></li>
+            </ul>
+          </li> -->
+          <!-- <li class="dropdown"><a href="administration.html"><span>Administration</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="administration.html#president">Office of the President</a></li>
+              <li><a href="administration.html#faculty">Faculty</a></li>
+            </ul>
+          </li> -->
+          <li class="dropdown"><a href="admission.html" class="active"><span>Admission</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="admission.html#colleges">Colleges</a></li>
+              <li><a href="admission.html#programs">Programs</a></li>
+            </ul>
+          </li>
+          <!-- <li class="dropdown"><a href="students.html"><span>Students</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="students.html#students-org">Students Organization</a></li>
+              <li><a href="students.html#testimonial">Students Testimonial</a></li>
+            </ul>
+          </li> -->
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
 
@@ -104,17 +99,137 @@
     <!-- ======= Colleges Section ======= -->
     <section id="colleges" class="colleges">
       <div class="container" data-aos="fade-up">
-      <div class=" section-header">
-        <h2>Colleges</h2>
-        <p>In commodi voluptatem excepturi quaerat nihil error autem voluptate ut et officia consequuntu.</p>
+        <div class="section-header">
+          <h2>Colleges & Programs</h2>
+        </div>
       </div>
-      <div class="row gy-5">
+      <div class="container">
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+          <ul class="colleges-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-engineering">Engineering</li>
+            <li data-filter=".filter-education">Education</li>
+            <li data-filter=".filter-agriculture">Agriculture</li>
+            <li data-filter=".filter-IT">IT</li>
+          </ul>
 
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-4 col-md-6 colleges-item isotope-item filter-engineering">
+              <div class="colleges-content h-100">
+                <a href="assets/img/colleges/engineering-1.jpg" data-gallery="colleges-gallery-engineering" class="glightbox"><img src="assets/img/colleges/engineering-1.jpg" class="img-fluid" alt=""></a>
+                <div class="colleges-info">
+                  <h4><a href="admission.html" title="More Details">Civil Engineering</a></h4>
+                  <p>Design, construction, and maintenance of infrastructure such as buildings, bridges, and roads</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 colleges-item isotope-item filter-education">
+              <div class="colleges-content h-100">
+                <a href="assets/img/colleges/education-1.webp" data-gallery="colleges-gallery-engineering" class="glightbox"><img src="assets/img/colleges/education-1.jpg" class="img-fluid" alt=""></a>
+                <div class="colleges-info">
+                  <h4><a href="admission.html" title="More Details">Elementary Education</a></h4>
+                  <p>Preparing students to teach at the elementary level</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 colleges-item isotope-item filter-agriculture">
+              <div class="colleges-content h-100">
+                <a href="assets/img/colleges/agriculture-1.jpg" data-gallery="colleges-gallery-engineering" class="glightbox"><img src="assets/img/colleges/agriculture-1.jpg" class="img-fluid" alt=""></a>
+                <div class="colleges-info">
+                  <h4><a href="admission.html" title="More Details">BS in Agriculture</a></h4>
+                  <p>Comprehensive training in crop production, animal husbandry, agribusiness, and sustainable farming practices</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 colleges-item isotope-item filter-IT">
+              <div class="colleges-content h-100">
+                <a href="assets/img/colleges/IT-1.jpg" data-gallery="colleges-gallery-engineering" class="glightbox"><img src="assets/img/colleges/IT-1.jpg" class="img-fluid" alt=""></a>
+                <div class="colleges-info">
+                  <h4><a href="admission.html" title="More Details">BS in Information Technology</a></h4>
+                  <p>Development and management of IT infrastructure, software development, and network administration</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 colleges-item isotope-item filter-engineering">
+              <div class="colleges-content h-100">
+                <a href="assets/img/colleges/engineering-2.jpg" data-gallery="colleges-gallery-engineering" class="glightbox"><img src="assets/img/colleges/engineering-2.jpg" class="img-fluid" alt=""></a>
+                <div class="colleges-info">
+                  <h4><a href="admission.html" title="More Details">Mechanical Engineering</a></h4>
+                  <p>Design, operation, and maintenance of machinery and mechanical systems</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 colleges-item isotope-item filter-education">
+              <div class="colleges-content h-100">
+                <a href="assets/img/colleges/education-2.jpg" data-gallery="colleges-gallery-engineering" class="glightbox"><img src="assets/img/colleges/education-2.jpg" class="img-fluid" alt=""></a>
+                <div class="colleges-info">
+                  <h4><a href="admission.html" title="More Details">Secondary Education</a></h4>
+                  <p>Training students to teach at the secondary level (high school)</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 colleges-item isotope-item filter-agriculture">
+              <div class="colleges-content h-100">
+                <a href="assets/img/colleges/agriculture-2.jpg" data-gallery="colleges-gallery-engineering" class="glightbox"><img src="assets/img/colleges/agriculture-2.jpg" class="img-fluid" alt=""></a>
+                <div class="colleges-info">
+                  <h4><a href="admission.html" title="More Details">Agribusiness Management</a></h4>
+                  <p>The business side of agriculture, including marketing, finance, and management of agricultural enterprises</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 colleges-item isotope-item filter-IT">
+              <div class="colleges-content h-100">
+                <a href="assets/img/colleges/IT-2.jpg" data-gallery="colleges-gallery-engineering" class="glightbox"><img src="assets/img/colleges/IT-2.jpg" class="img-fluid" alt=""></a>
+                <div class="colleges-info">
+                  <h4><a href="admission.html" title="More Details">Computer Science</a></h4>
+                  <p>Theoretical and practical aspects of computing, including programming, algorithms, and system design</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 colleges-item isotope-item filter-engineering">
+              <div class="colleges-content h-100">
+                <a href="assets/img/colleges/engineering-3.jpg" data-gallery="colleges-gallery-engineering" class="glightbox"><img src="assets/img/colleges/engineering-3.jpg" class="img-fluid" alt=""></a>
+                <div class="colleges-info">
+                  <h4><a href="admission.html" title="More Details">Electrical Engineering</a></h4>
+                  <p>Study of electrical systems, power generation, transmission, and electronics</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 colleges-item isotope-item filter-education">
+              <div class="colleges-content h-100">
+                <a href="assets/img/colleges/education-3.jpg" data-gallery="colleges-gallery-engineering" class="glightbox"><img src="assets/img/colleges/education-3.jpg" class="img-fluid" alt=""></a>
+                <div class="colleges-info">
+                  <h4><a href="admission.html" title="More Details">Early Childhood Education</a></h4>
+                  <p>Equipping students with the skills to teach young children, typically in preschool or kindergarten</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 colleges-item isotope-item filter-agriculture">
+              <div class="colleges-content h-100">
+                <a href="assets/img/colleges/agriculture-3.jpg" data-gallery="colleges-gallery-engineering" class="glightbox"><img src="assets/img/colleges/agriculture-3.jpg" class="img-fluid" alt=""></a>
+                <div class="colleges-info">
+                  <h4><a href="admission.html" title="More Details">Agricultural Engineering</a></h4>
+                  <p>Application of engineering principles to agriculture, such as designing irrigation systems, farm machinery, and post-harvest facilities</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 colleges-item isotope-item filter-IT">
+              <div class="colleges-content h-100">
+                <a href="assets/img/colleges/IT-3.jpg" data-gallery="colleges-gallery-engineering" class="glightbox"><img src="assets/img/colleges/IT-3.jpg" class="img-fluid" alt=""></a>
+                <div class="colleges-info">
+                  <h4><a href="admission.html" title="More Details">BS in Information Systems</a></h4>
+                  <p>Integration of IT solutions into business processes, focusing on systems analysis, database management, and business intelligence</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+    <br>
 
     <!-- ======= Programs Section ======= -->
-    <section id="programs" class="programs">
+    <!-- <section id="programs" class="programs">
         <div class="container" data-aos="fade-up">
         <div class=" section-header">
           <h2>Programs</h2>
@@ -123,7 +238,7 @@
         <div class="row gy-5">
   
         </div>
-      </section>
+      </section> -->
    
   </main>
 
@@ -181,15 +296,14 @@
             </div>
           </div>    
         </div>
-
       </div>
     </div>
 
     <div class="container copyright text-center mt-4">
       <p>&copy; <span>Copyright 2024</span> <strong class="px-1">KCST</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        Designed by <a href="#">Dexign</a>
-      </div>
+      <!-- <div class="credits">
+        Designed by <a href="#"></a>
+      </div> -->
     </div>
 
   </footer>
@@ -198,14 +312,15 @@
 
   <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <!-- Libraries -->
+  <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/libs/aos/aos.js"></script>
+  <script src="assets/libs/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/libs/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/libs/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/libs/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/libs/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
